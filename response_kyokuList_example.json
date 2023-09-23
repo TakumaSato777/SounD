@@ -1,0 +1,20 @@
+{
+    "id":"0001",
+    "seichi":"新都心歩道橋下交差点",
+    "setsumei":"映画『君の名は。』のOP聖地です。",
+    "basho":"東京都新宿区西新宿〇丁目△△番地",
+    "song":[
+        {
+            "kyokumei":"前前前世",
+            "url":"https://youtu.be/PDSkFeMVNFs"
+        },
+        {
+            "kyokumei":"夢灯籠",
+            "url":"https://youtu.be/S6kjwLlKXnk"
+        },
+        {
+            "kyokumei":"スパークル",
+            "url":"https://youtu.be/pVs0H08el-U"
+        }
+    ]
+}

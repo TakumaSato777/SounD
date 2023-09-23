@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>レコメンドリスト</title>
+</head>
+
+<body>
+
+<ul id="datalist">
+        </ul>
+    <script>
+        const table = document.querySelector('table');
+
+        jsonData.song.forEach(song => {
+            const row = table.insertRow(-1);
+            const cell1 = row.insertCell(0);
+            const cell2 = row.insertCell(1);
+
+            cell1.innerHTML = song.kyokumei;
+            cell2.innerHTML = `<a href="${song.url}">${song.url}</a>`;
+        });
+    </script>
+
+</body>
+
+</html>

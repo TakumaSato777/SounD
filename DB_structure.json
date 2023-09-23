@@ -1,0 +1,41 @@
+[
+{
+    "id":"0001",
+    "seichi":"Recochoku",
+    "setsumei":"インターンシップ会場です",
+    "basho":"東京都渋谷区",
+    "song":[
+        {
+            "kyokumei":"music1",
+            "url":"url1です。"
+        },
+        {
+            "kyokumei":"music2",
+            "url":"url2です。"
+        },
+        {
+            "kyokumei":"music3",
+            "url":"url3です。"
+        }
+    ]
+},{
+    "id":"0002",
+    "seichi":"Recochoku2",
+    "setsumei":"インターンシップ会場です",
+    "basho":"東京都渋谷区",
+    "song":[
+        {
+            "kyokumei":"music1",
+            "url":"url1です。"
+        },
+        {
+            "kyokumei":"music2",
+            "url":"url2です。"
+        },
+        {
+            "kyokumei":"music3",
+            "url":"url3です。"
+        }
+    ]
+}
+]

@@ -1,0 +1,206 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Call Example</title>
+</head>
+<body>
+    <br></br>
+    <h1 class="container">近くの聖地リスト</h1>
+    
+    <button id = 1 class="buttonA block">聖地1</button>
+    
+    <button id = 2 class="buttonA block">聖地2</button>
+    
+    <button id = 3 class="buttonA block">聖地3</button>
+
+    <script>
+        document.getElementById(1).addEventListener('click', function() {
+            // ここでIDを設定します。例として1を使用しますが、適切なIDに変更してください。
+            const id = 1;
+
+            function xxx() {
+                const xhr = new XMLHttpRequest();
+                
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            const response = JSON.parse(xhr.responseText);
+                            console.log(response);
+
+                            const newWindow = window.open('list.html', '_blank');
+
+                    // 新しいウィンドウの読み込み完了時に処理を実行します
+                    newWindow.onload = function() {
+                    const tableElement = newWindow.document.createElement('table');
+                    const tbodyElement = newWindow.document.createElement('tbody');
+                    // 表のヘッダ行を作成
+                    const headerRow = newWindow.document.createElement('tr');
+                    const headerCell1 = newWindow.document.createElement('th');
+                    headerCell1.textContent = '楽曲名';
+                    const headerCell2 = newWindow.document.createElement('th');
+                    headerCell2.textContent = 'URL';
+                    headerRow.appendChild(headerCell1);
+                    headerRow.appendChild(headerCell2);
+                    tbodyElement.appendChild(headerRow);
+
+                    // songsプロパティに対してforEachを適用し、表の行とセルを生成
+                    response.song.forEach(item => {
+                            const row = newWindow.document.createElement('tr');
+                            const cell1 = newWindow.document.createElement('td');
+                            cell1.textContent = item.kyokumei; // 楽曲名をセルに追加
+                            const cell2 = newWindow.document.createElement('td');
+                            const link = newWindow.document.createElement('a');
+                            link.href = item.url; // URLをリンクに設定
+                            link.textContent = item.url; // リンクのテキストをURLに設定
+                            cell2.appendChild(link);
+                            row.appendChild(cell1);
+                            row.appendChild(cell2);
+                            tbodyElement.appendChild(row);
+                        });
+
+                        tableElement.appendChild(tbodyElement);
+                        newWindow.document.body.appendChild(tableElement);
+                    };
+
+                        } else {
+                            console.error("リクエストが失敗しました。ステータスコード: " + xhr.status);
+                        }
+                        
+                    };
+                }
+                
+                xhr.open('GET', 'http://localhost:8888/kyokuList?id=01', true); 
+                xhr.send();
+            }
+
+            xxx()
+        });
+    </script>
+    <script>
+        document.getElementById(2).addEventListener('click', function() {
+            // ここでIDを設定します。例として1を使用しますが、適切なIDに変更してください。
+            const id = 2;
+
+            function xxx() {
+                const xhr = new XMLHttpRequest();
+                
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            const response = JSON.parse(xhr.responseText);
+                            console.log(response);
+
+                            const newWindow = window.open('list.html', '_blank');
+
+                            // 新しいウィンドウの読み込み完了時に処理を実行します
+                            newWindow.onload = function() {
+                                const tableElement = newWindow.document.createElement('table');
+                                const tbodyElement = newWindow.document.createElement('tbody');
+                                // 表のヘッダ行を作成
+                                const headerRow = newWindow.document.createElement('tr');
+                                const headerCell1 = newWindow.document.createElement('th');
+                                headerCell1.textContent = '楽曲名';
+                                const headerCell2 = newWindow.document.createElement('th');
+                                    headerCell2.textContent = 'URL';
+                                headerRow.appendChild(headerCell1);
+                                headerRow.appendChild(headerCell2);
+                                tbodyElement.appendChild(headerRow);
+        
+                                // songsプロパティに対してforEachを適用し、表の行とセルを生成
+                                response.song.forEach(item => {
+                                        const row = newWindow.document.createElement('tr');
+                                        const cell1 = newWindow.document.createElement('td');
+                                        cell1.textContent = item.kyokumei; // 楽曲名をセルに追加
+                                        const cell2 = newWindow.document.createElement('td');
+                                        const link = newWindow.document.createElement('a');
+                                        link.href = item.url; // URLをリンクに設定
+                                        link.textContent = item.url; // リンクのテキストをURLに設定
+                                        cell2.appendChild(link);
+                                        row.appendChild(cell1);
+                                        row.appendChild(cell2);
+                                        tbodyElement.appendChild(row);
+                                    });
+        
+                                tableElement.appendChild(tbodyElement);
+                                newWindow.document.body.appendChild(tableElement);
+                                };
+                            } else {
+                            console.error("リクエストが失敗しました。ステータスコード: " + xhr.status);
+                        }
+                    };
+                }
+                
+                xhr.open('GET', 'http://localhost:8888/kyokuList?id=01', true); 
+                xhr.send();
+            }
+
+            xxx()
+        });
+    </script>
+    <script>
+        document.getElementById(3).addEventListener('click', function() {
+            // ここでIDを設定します。例として1を使用しますが、適切なIDに変更してください。
+            const id = 3;
+
+            function xxx() {
+                const xhr = new XMLHttpRequest();
+                
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            const response = JSON.parse(xhr.responseText);
+                            console.log(response);
+
+                            const newWindow = window.open('list.html', '_blank');
+
+                    // 新しいウィンドウの読み込み完了時に処理を実行します
+                            newWindow.onload = function() {
+                                const tableElement = newWindow.document.createElement('table');
+                                const tbodyElement = newWindow.document.createElement('tbody');
+                                // 表のヘッダ行を作成
+                                const headerRow = newWindow.document.createElement('tr');
+                                const headerCell1 = newWindow.document.createElement('th');
+                                headerCell1.textContent = '楽曲名';
+                                const headerCell2 = newWindow.document.createElement('th');
+                                headerCell2.textContent = 'URL';
+                                headerRow.appendChild(headerCell1);
+                                headerRow.appendChild(headerCell2);
+                                tbodyElement.appendChild(headerRow);
+
+                                // songsプロパティに対してforEachを適用し、表の行とセルを生成
+                                response.song.forEach(item => {
+                                    const row = newWindow.document.createElement('tr');
+                                    const cell1 = newWindow.document.createElement('td');
+                                    cell1.textContent = item.kyokumei; // 楽曲名をセルに追加
+                                    const cell2 = newWindow.document.createElement('td');
+                                    const link = newWindow.document.createElement('a');
+                                    link.href = item.url; // URLをリンクに設定
+                                    link.textContent = item.url; // リンクのテキストをURLに設定
+                                    cell2.appendChild(link);
+                                    row.appendChild(cell1);
+                                    row.appendChild(cell2);
+                                    tbodyElement.appendChild(row);
+                                });
+
+                                tableElement.appendChild(tbodyElement);
+                                newWindow.document.body.appendChild(tableElement);
+                                };
+                            } else {
+                            console.error("リクエストが失敗しました。ステータスコード: " + xhr.status);
+                        }
+                    };
+                }
+                
+                xhr.open('GET', 'http://localhost:8888/kyokuList?id=01', true); 
+                xhr.send();
+            }
+
+            xxx()
+        });
+    </script>
+</body>
+</html>
