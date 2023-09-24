@@ -6,56 +6,39 @@ SounDはその場所にあった音楽を聴きたい、
 検索して音楽を聴くこととは違って、
 検索の手間を省き、聖地への没入感を高める機能が備わっています。
 
+このアプリケーションは株式会社レコチョクで9/16~9/17の二日間で開催されたハッカソンにおいて5人チームで作成しました。
+バックエンドとフロントエンドの開発は分けて、私はフロントエンドを担当しました。
+
+
 # DEMO
 
+html上でユーザーから受け付けたリクエストをサーバーに送信し、サーバーから曲のリストを送り、その受け取った曲名とURLを表示するデモです。
 
- 
-# Features
- 
-"hoge"のセールスポイントや差別化などを説明する
+https://github.com/TakumaSato777/SounD/assets/106140050/ddb3093e-2980-4f89-ba37-8870edb8f2e8
+
+
  
 # Requirement
  
 "hoge"を動かすのに必要なライブラリなどを列挙する
  
-* huga 3.5.2
-* hogehuga 1.0.2
+* flask
+* flask_cors
  
 # Installation
  
 Requirementで列挙したライブラリなどのインストール方法を説明する
  
 ```bash
-pip install huga_package
+pip install flask_cors
+pip install flask
 ```
  
 # Usage
  
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
+DEMOはpyhonでサーバーを起動し、index.htmlから操作してサーバーにリクエストを送ります。
  
 ```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
+python backend_python.py 
 ```
- 
-# Note
- 
-注意点などがあれば書く
- 
-# Author
- 
-作成情報を列挙する
- 
-* 作成者
-* 所属
-* E-mail
- 
-# License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
+
