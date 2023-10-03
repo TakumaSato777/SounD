@@ -19,15 +19,13 @@ https://github.com/TakumaSato777/SounD/assets/106140050/ddb3093e-2980-4f89-ba37-
 
  
 # Requirement
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
+
  
 * flask
 * flask_cors
  
 # Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
+ ライブラリのインストール方法
  
 ```bash
 pip install flask_cors
