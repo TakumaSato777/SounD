@@ -25,7 +25,7 @@ https://github.com/TakumaSato777/SounD/assets/106140050/ddb3093e-2980-4f89-ba37-
 * flask_cors
  
 # Installation
- インストール方法
+ Requirementのインストール方法
  
 ```bash
 pip install flask_cors
@@ -34,7 +34,10 @@ pip install flask
  
 # Usage
  
-DEMOはpyhonでサーバーを起動し、index.htmlから操作してサーバーにリクエストを送ります。
+DEMO起動方法
+1.backend_python.pyを起動
+2.index.htmlを起動
+3.聖地をクリックすると曲が表示される
  
 ```bash
 python backend_python.py 
